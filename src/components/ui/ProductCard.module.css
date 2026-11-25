@@ -1,0 +1,26 @@
+.card { min-width: 0; }
+.media {
+  position: relative; display: grid; place-items: center; aspect-ratio: 1 / 1.05;
+  background: var(--card); overflow: hidden;
+}
+.media img { width: 100%; height: 100%; object-fit: cover; }
+.art { width: 82%; }
+.badge {
+  position: absolute; top: 10px; left: 10px; padding: 6px 10px; background: var(--paper);
+  color: var(--ink); font-size: 0.625rem; font-weight: 500; text-transform: uppercase;
+}
+.like {
+  position: absolute; top: 10px; right: 10px; display: grid; place-items: center;
+  width: 34px; height: 34px; border-radius: 50%; background: var(--paper); color: var(--ink);
+}
+.row { display: flex; justify-content: space-between; gap: 8px; margin-top: 14px; }
+.name { font-size: 1.0625rem; font-weight: 500; }
+.price { font-size: 0.875rem; }
+.meta { margin-top: 6px; font-size: 0.8125rem; color: var(--muted); }
+.swatches { display: flex; gap: 8px; margin-top: 14px; }
+.swatches li { width: 12px; height: 12px; border-radius: 50%; }
+
+@media (min-width: 768px) {
+  .name { font-size: 1.25rem; }
+  .price { font-size: 1rem; }
+}

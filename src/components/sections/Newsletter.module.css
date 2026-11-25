@@ -1,0 +1,26 @@
+.section { background: var(--lime); color: var(--ink); padding-block: 40px; }
+.inner { display: grid; gap: 28px; }
+.title { font-size: clamp(2.75rem, 12vw, 4rem); letter-spacing: -0.045em; line-height: 0.95; }
+.lead { max-width: 44ch; }
+.form { display: flex; flex-direction: column; gap: 8px; margin-top: 24px; }
+.form input {
+  min-height: 52px; padding: 0 20px; border: 0; background: var(--paper); color: var(--ink); border-radius: 4px;
+}
+.form input::placeholder { color: #77776e; }
+.form button { width: 100%; }
+.status { margin-top: 14px; font-size: 0.75rem; }
+.foot { font-size: 0.75rem; text-transform: uppercase; margin-top: 16px; }
+
+@media (min-width: 768px) {
+  .section { padding-block: 64px; }
+  .form { flex-direction: row; gap: 0; background: var(--paper); padding: 5px; border-radius: 4px; }
+  .form input { flex: 1; min-width: 0; }
+  .form button { width: auto; }
+}
+@media (min-width: 1024px) {
+  .inner { grid-template-columns: 1fr 1fr; column-gap: 64px; }
+  .eyebrow { grid-column: 1; }
+  .title { grid-column: 1; grid-row: 2; }
+  .side { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+  .foot { grid-column: 1; margin-top: 56px; }
+}

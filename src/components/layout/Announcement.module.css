@@ -1,0 +1,4 @@
+.bar {
+  background: #111; color: #f3f2ec; text-align: center; padding: 8px var(--gutter);
+  font-size: 0.6875rem; font-weight: 500; text-transform: uppercase;
+}
